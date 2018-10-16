@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">MyMeds</string>
+
+    <!-- Tela de Login -->
+    <string name="text_login">Login</string>
+    <string name="text_password">Senha</string>
+    <string name="button_entrar">Entrar</string>
+
+    <!-- Menu -->
+    <string name="menu_inicio">Inicio</string>
+    <string name="menu_nova_receita">Nova Receita</string>
+    <string name="menu_meus_dados">Meus Dados</string>
+    <string name="menu_sair">Sair</string>
+
+    <!-- Main -->
+    <string name="nova_receita">Adicionar Nova Receita</string>
+    <string name="main_title">Minhas Receitas</string>
+
+    <!-- Form Receita -->
+    <string name="form_receita_descricao">Descrição da Receita</string>
+    <string name="form_receita_obs">Observação</string>
+    <string name="form_receita_title">Fotos da Receita</string>
+    <string name="form_receita_btn_add_foto">Nova Foto</string>
+    <string name="form_receita_btn_publicar">Publicar</string>
+</resources>

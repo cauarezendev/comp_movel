@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:layout_editor_absoluteY="81dp">
+
+    <ImageButton
+        android:id="@+id/btnAdicionar"
+        android:layout_width="34dp"
+        android:layout_height="37dp"
+        android:background="?attr/colorBackgroundFloating"
+        app:srcCompat="@android:drawable/ic_input_add"
+        tools:layout_editor_absoluteX="24dp"
+        tools:layout_editor_absoluteY="28dp" />
+
+    <TextView
+        android:id="@+id/nova_receita"
+        android:layout_width="259dp"
+        android:layout_height="34dp"
+        android:text="@string/nova_receita"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="31dp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="0dp"
+        android:layout_height="26dp"
+        android:gravity="center"
+        android:text="@string/main_title"
+        android:textAppearance="@style/TextAppearance.AppCompat.Title"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="102dp" />
+
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="395dp"
+        android:layout_height="459dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:headerDividersEnabled="false"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="136dp" />
+
+</android.support.constraint.ConstraintLayout>
