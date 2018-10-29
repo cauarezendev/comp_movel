@@ -27,12 +27,14 @@ public class LoginActivity extends AppCompatActivity {
         btnEntrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if (editLogin.getText().toString().equals("caua") &&
+                if (editLogin.getText().toString().equals("admin") &&
                         editPassword.getText().toString().equals(("123456"))) {
                     Intent it = new Intent(LoginActivity.this, MainActivity.class);
                     startActivity(it);
                 }
             }
         });
+
+
     }
 }
