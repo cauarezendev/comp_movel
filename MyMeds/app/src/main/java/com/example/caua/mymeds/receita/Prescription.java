@@ -76,6 +76,6 @@ public class Prescription {
 
     @Override
     public String toString() {
-        return "Receita " + this.getDescricao() + "\n Quantidade de Propostas: " + this.getProposta();
+        return "Receita " + this.getDescricao();
     }
 }

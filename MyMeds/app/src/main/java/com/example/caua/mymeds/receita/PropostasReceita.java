@@ -15,6 +15,11 @@ import com.example.caua.mymeds.LoginActivity;
 import com.example.caua.mymeds.R;
 import com.example.caua.mymeds.forms.FormReceita;
 
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.TimeZone;
+
 public class PropostasReceita extends AppCompatActivity {
     private TextView tvReceita;
     private TextView tvData;
@@ -29,8 +34,23 @@ public class PropostasReceita extends AppCompatActivity {
         tvReceita = (TextView) findViewById(R.id.tvReceita);
         tvData = (TextView) findViewById(R.id.tvData);
 
-        tvReceita.setText(getIntent().getStringExtra("descricao"));
-        tvData.setText(getIntent().getStringExtra("data"));
+        tvReceita.setText("Receita: "  + getIntent().getStringExtra("descricao"));
+
+        TimeZone tz = TimeZone.getTimeZone("UTC");
+        DateFormat df = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm'Z'");
+        df.setTimeZone(tz);
+        Date date = new Date();
+        try {
+            date = df.parse(getIntent().getStringExtra("data"));
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        TimeZone tzs = TimeZone.getTimeZone("UTC");
+        DateFormat dfs = new SimpleDateFormat("dd/MM/yy");
+        dfs.setTimeZone(tzs);
+        tvData.setText("Data: " + dfs.format(date));
 
         btnEditar = (ImageButton) findViewById(R.id.btnEditar);
         btnEditar.setOnClickListener(new View.OnClickListener() {

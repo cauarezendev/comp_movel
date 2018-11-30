@@ -107,7 +107,9 @@ public class FormReceita extends AppCompatActivity {
                         else {
                             Toast.makeText(getApplicationContext(), "Nova receita cadastrada com sucesso", Toast.LENGTH_SHORT).show();
                             Intent it = new Intent(FormReceita.this, MainActivity.class);
+                            it.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                             startActivity(it);
+                            finish();
                         }
                     }
                     catch (JSONException e) {

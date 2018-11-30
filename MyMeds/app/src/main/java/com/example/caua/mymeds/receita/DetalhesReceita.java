@@ -16,6 +16,10 @@ import com.example.caua.mymeds.LoginActivity;
 import com.example.caua.mymeds.R;
 
 import java.net.URL;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.TimeZone;
 
 public class DetalhesReceita extends AppCompatActivity {
     private TextView tvDescricao;
@@ -29,14 +33,28 @@ public class DetalhesReceita extends AppCompatActivity {
         setContentView(R.layout.activity_detalhes_receita);
 
         tvDescricao = (TextView) findViewById(R.id.tvDescricao);
-        tvDescricao.setText(getIntent().getStringExtra("descricao"));
+        tvDescricao.setText("Descrição: " + getIntent().getStringExtra("descricao"));
 
         tvObs = (TextView) findViewById(R.id.tvObs);
-        tvObs.setText(getIntent().getStringExtra("obs"));
+        tvObs.setText("Observação: " + getIntent().getStringExtra("obs"));
+
+        TimeZone tz = TimeZone.getTimeZone("UTC");
+        DateFormat df = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm'Z'");
+        df.setTimeZone(tz);
+        Date date = new Date();
+        try {
+            date = df.parse(getIntent().getStringExtra("data"));
+        }
+        catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        TimeZone tzs = TimeZone.getTimeZone("UTC");
+        DateFormat dfs = new SimpleDateFormat("dd/MM/yy");
+        dfs.setTimeZone(tzs);
 
         tvData = (TextView) findViewById(R.id.tvData);
-        tvData.setText(getIntent().getStringExtra("data"));
-
+        tvData.setText("Data: " + dfs.format(date));
         imgReceita = (ImageView) findViewById(R.id.imgReceita);
         try {
             URL url = new URL(getIntent().getStringExtra("receita"));
