@@ -1,4 +1,4 @@
-package com.example.caua.mymeds;
+package com.example.caua.mymeds.forms;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -6,6 +6,9 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+
+import com.example.caua.mymeds.LoginActivity;
+import com.example.caua.mymeds.R;
 
 public class FormProposal extends AppCompatActivity {
 
@@ -25,7 +28,6 @@ public class FormProposal extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         Intent it;
-
         // Handle item selection
         switch (item.getItemId()) {
             case R.id.sair:

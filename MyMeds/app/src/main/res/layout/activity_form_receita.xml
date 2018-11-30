@@ -7,25 +7,26 @@
     tools:layout_editor_absoluteY="81dp">
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/editDescricao"
         android:layout_width="0dp"
-        android:layout_height="46dp"
+        android:layout_height="0dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="31dp"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
-        android:layout_marginBottom="26dp"
+        android:layout_marginBottom="270dp"
         android:ems="10"
         android:hint="@string/form_receita_descricao"
         android:inputType="textPersonName"
-        app:layout_constraintBottom_toTopOf="@+id/editText3"
+        android:theme="@style/MyEditTextStyle2"
+        app:layout_constraintBottom_toTopOf="@+id/mImageView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editText3"
+        android:id="@+id/editObs"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginStart="16dp"
@@ -36,10 +37,11 @@
         android:ems="10"
         android:hint="@string/form_receita_obs"
         android:inputType="textMultiLine"
+        android:theme="@style/MyEditTextStyle2"
         app:layout_constraintBottom_toTopOf="@+id/textView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText2" />
+        app:layout_constraintTop_toBottomOf="@+id/editDescricao" />
 
     <TextView
         android:id="@+id/textView"
@@ -53,37 +55,50 @@
         android:gravity="center"
         android:text="@string/form_receita_title"
         android:textAppearance="@style/TextAppearance.AppCompat.Title"
-        app:layout_constraintBottom_toTopOf="@+id/button"
+        app:layout_constraintBottom_toTopOf="@+id/btnNewPicture"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText3" />
+        app:layout_constraintTop_toBottomOf="@+id/editObs" />
 
     <Button
-        android:id="@+id/button"
-        android:layout_width="114dp"
+        android:id="@+id/btnNewPicture"
+        android:layout_width="0dp"
         android:layout_height="90dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginEnd="17dp"
-        android:layout_marginRight="17dp"
+        android:layout_marginStart="17dp"
+        android:layout_marginLeft="17dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginRight="32dp"
         android:layout_marginBottom="10dp"
         android:background="@android:drawable/ic_input_add"
         android:gravity="bottom|center"
         android:text="@string/form_receita_btn_add_foto"
-        app:layout_constraintBottom_toTopOf="@+id/button2"
-        app:layout_constraintEnd_toStartOf="@+id/button2"
+        app:layout_constraintBottom_toTopOf="@+id/btnPublicar"
+        app:layout_constraintEnd_toStartOf="@+id/mImageView"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/btnPublicar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
+        android:background="@color/colorPrimary"
         android:text="@string/form_receita_btn_publicar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+        app:layout_constraintTop_toBottomOf="@+id/btnNewPicture" />
 
+    <ImageView
+        android:id="@+id/mImageView"
+        android:layout_width="105dp"
+        android:layout_height="83dp"
+        android:layout_marginEnd="131dp"
+        android:layout_marginRight="131dp"
+        android:layout_marginBottom="78dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnNewPicture"
+        app:layout_constraintTop_toBottomOf="@+id/editDescricao"
+        app:srcCompat="@android:drawable/screen_background_light_transparent" />
 </android.support.constraint.ConstraintLayout>

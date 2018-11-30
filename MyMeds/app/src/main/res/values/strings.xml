@@ -5,9 +5,13 @@
     <string name="text_login">Login</string>
     <string name="text_password">Senha</string>
     <string name="button_entrar">Entrar</string>
+    <string name="text_forget">Esqueci minha senha</string>
+    <string name="text_cadastro">Ainda não tem uma conta?</string>
+    <string name="text_cadastrar">Cadastre-se.</string>
 
     <!-- Menu -->
     <string name="menu_inicio">Inicio</string>
+    <string name="menu_minhas_receitas">Minhas Receitas</string>
     <string name="menu_nova_receita">Nova Receita</string>
     <string name="menu_meus_dados">Meus Dados</string>
     <string name="menu_sair">Sair</string>
@@ -22,4 +26,24 @@
     <string name="form_receita_title">Fotos da Receita</string>
     <string name="form_receita_btn_add_foto">Nova Foto</string>
     <string name="form_receita_btn_publicar">Publicar</string>
+
+    <!-- Form Customer/Pharmacy -->
+    <string name="form_customer_title">Cadastro de Cliente</string>
+    <string name="form_customer_email">E-mail</string>
+    <string name="form_customer_bairro">Bairro</string>
+    <string name="form_customer_cep">CEP</string>
+    <string name="form_customer_numero">Número</string>
+    <string name="form_customer_rua">Rua</string>
+    <string name="form_customer_telefone">Celular</string>
+    <string name="form_customer_nome">Nome/RazãoSocial</string>
+    <string name="form_customer_customer">Cliente</string>
+    <string name="form_customer_pharmacy">Farmácia</string>
+    <string name="form_customer_senha">Senha</string>
+    <string name="form_customer_confirmar_senha">Confirmar senha</string>
+    <string name="form_customer_cadastrar">Cadastrar</string>
+    <string name="form_customer_cancelar">Cancelar</string>
+
+    <!-- Detalhes Receita -->
+    <string name="detalhes">Descrição da Receita</string>
+    <string name="description_zoom_touch_close"></string>
 </resources>
