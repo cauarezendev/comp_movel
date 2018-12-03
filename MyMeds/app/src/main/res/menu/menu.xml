@@ -15,7 +15,7 @@
         android:orderInCategory="100"
         app:showAsAction="never" />
     <item
-        android:id="@+id/nova_receita"
+        android:id="@+id/receitas_titulo"
         android:title="@string/menu_nova_receita"
         android:orderInCategory="100"
         app:showAsAction="never" />

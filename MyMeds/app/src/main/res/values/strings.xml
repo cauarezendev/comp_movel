@@ -46,4 +46,21 @@
     <!-- Detalhes Receita -->
     <string name="detalhes">Descrição da Receita</string>
     <string name="description_zoom_touch_close"></string>
+
+    <!-- Propostas -->
+    <string name="propostas">Propostas</string>
+
+    <!-- Main Pharmacy -->
+    <string name="main_pharmacy_title">Receitas dos clientes</string>
+
+    <!-- Make Proposal -->
+    <string name="make_proposal_title">Faça sua proposta</string>
+    <string name="make_proposal_detalhes">Informações do Cliente</string>
+    <string name="make_proposal_valor">Valor da Receita</string>
+    <string name="make_proposal_obs">Observações</string>
+    <string name="make_proposal_entrega">Valor da Entrega</string>
+    <string name="make_proposal_fazer_proposta">Fazer Proposta</string>
+
+    <!-- Client Details -->
+    <string name="client_details_title">Informações do cliente</string>
 </resources>

@@ -2,7 +2,7 @@ package com.example.caua.mymeds;
 
 
 import android.content.Intent;
-import android.graphics.ColorFilter;
+
 import android.graphics.PorterDuff;
 import android.os.StrictMode;
 import android.support.v7.app.AppCompatActivity;
@@ -15,7 +15,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.caua.mymeds.constants.Constantes;
-import com.example.caua.mymeds.farmacia.PharmacyActivity;
+import com.example.caua.mymeds.farmacia.MainPharmacyActivity;
 import com.example.caua.mymeds.forms.FormCustomer;
 import com.example.caua.mymeds.receita.MainActivity;
 
@@ -27,7 +27,6 @@ import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.RequestBody;
 import okhttp3.Response;
-
 
 public class LoginActivity extends AppCompatActivity {
     private EditText editLogin;
@@ -66,14 +65,26 @@ public class LoginActivity extends AppCompatActivity {
                             JSONObject user = new JSONObject(res.get("user").toString());
                             Toast.makeText(getApplicationContext(), "Login efetuado com sucesso", Toast.LENGTH_SHORT).show();
                             int tipo = Integer.parseInt(user.get("tipo").toString());
-                                Intent it = new Intent(getApplicationContext(), MainActivity.class);
+                                if (tipo == 1) {
+                                    Intent it = new Intent(getApplicationContext(), MainActivity.class);
 
-                                String id = user.get("id").toString();
-                                it.putExtra("id", id);
-                                it.putExtra("tipo", tipo);
+                                    String id = user.get("id").toString();
+                                    it.putExtra("id", id);
+                                    it.putExtra("tipo", tipo);
 
-                                startActivity(it);
-                                finish();
+                                    startActivity(it);
+                                    finish();
+                                }
+                                else {
+                                    Intent it = new Intent(getApplicationContext(), MainPharmacyActivity.class);
+
+                                    String id = user.get("id").toString();
+                                    it.putExtra("id", id);
+                                    it.putExtra("tipo", tipo);
+
+                                    startActivity(it);
+                                    finish();
+                                }
                         } else {
                             Toast.makeText(getApplicationContext(), "Email ou senha está incorreto", Toast.LENGTH_SHORT).show();
                         }

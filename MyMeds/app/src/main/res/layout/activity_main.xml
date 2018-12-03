@@ -19,7 +19,7 @@
         app:srcCompat="@android:drawable/ic_input_add" />
 
     <TextView
-        android:id="@+id/nova_receita"
+        android:id="@+id/receitas_titulo"
         android:layout_width="262dp"
         android:layout_height="37dp"
         android:layout_marginTop="28dp"
@@ -47,7 +47,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nova_receita" />
+        app:layout_constraintTop_toBottomOf="@+id/receitas_titulo" />
 
     <ListView
         android:id="@+id/listView"

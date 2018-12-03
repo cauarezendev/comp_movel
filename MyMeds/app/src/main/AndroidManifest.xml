@@ -8,6 +8,7 @@
     <uses-feature android:name="android.hardware.camera" android:required="true" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.CALL_PHONE" />
     <uses-feature android:name="android.hardware.camera" android:required="true" />
     <uses-feature android:name="android.hardware.camera.autofocus" />
     <application
@@ -31,10 +32,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".farmacia.MainPharmacyActivity"/>
+        <activity android:name=".farmacia.MakeProposal"/>
         <activity android:name=".forms.FormReceita"/>
         <activity android:name=".forms.FormProposal"/>
         <activity android:name=".forms.FormCustomer"/>
         <activity android:name=".receita.PropostasReceita" />
+        <activity android:name=".receita.PropostasReceitaEscolhida" />
         <activity android:name=".receita.DetalhesReceita" />
+        <activity android:name=".ClientDetails" />
     </application>
 </manifest>

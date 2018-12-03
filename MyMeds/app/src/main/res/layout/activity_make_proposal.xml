@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:layout_editor_absoluteY="81dp">
+
+    <TextView
+        android:id="@+id/etReceita"
+        android:layout_width="343dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="21dp"
+        android:layout_marginLeft="21dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="21dp"
+        android:layout_marginRight="21dp"
+        android:layout_marginBottom="23dp"
+        android:gravity="center_vertical|center"
+        android:textColor="@android:color/background_dark"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/btnDetalhes"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/btnDetalhes"
+        android:layout_width="50dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginEnd="13dp"
+        android:layout_marginRight="13dp"
+        android:layout_marginBottom="25dp"
+        android:background="@drawable/ic_launcher_background"
+        app:layout_constraintBottom_toTopOf="@+id/etEntrega"
+        app:layout_constraintEnd_toStartOf="@+id/etCliente"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etReceita"
+        app:srcCompat="@android:drawable/ic_menu_view" />
+
+    <TextView
+        android:id="@+id/etCliente"
+        android:layout_width="0dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="71dp"
+        android:layout_marginEnd="65dp"
+        android:layout_marginRight="65dp"
+        android:layout_marginBottom="72dp"
+        android:gravity="center_vertical"
+        android:text="@string/make_proposal_detalhes"
+        android:textColor="@android:color/background_dark"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/etEntrega"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnDetalhes"
+        app:layout_constraintTop_toTopOf="@+id/etReceita"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <EditText
+        android:id="@+id/etValor"
+        android:layout_width="338dp"
+        android:layout_height="48dp"
+        android:layout_marginBottom="15dp"
+        android:ems="10"
+        android:hint="@string/make_proposal_entrega"
+        android:inputType="numberDecimal"
+        app:layout_constraintBottom_toTopOf="@+id/etObs"
+        app:layout_constraintEnd_toEndOf="@+id/etObs"
+        app:layout_constraintStart_toStartOf="@+id/etObs"
+        app:layout_constraintTop_toBottomOf="@+id/etEntrega" />
+
+    <EditText
+        android:id="@+id/etEntrega"
+        android:layout_width="340dp"
+        android:layout_height="51dp"
+        android:layout_marginBottom="17dp"
+        android:ems="10"
+        android:hint="@string/make_proposal_valor"
+        android:inputType="numberDecimal"
+        app:layout_constraintBottom_toTopOf="@+id/etValor"
+        app:layout_constraintEnd_toEndOf="@+id/etValor"
+        app:layout_constraintStart_toStartOf="@+id/etValor"
+        app:layout_constraintTop_toBottomOf="@+id/btnDetalhes" />
+
+    <EditText
+        android:id="@+id/etObs"
+        android:layout_width="339dp"
+        android:layout_height="113dp"
+        android:layout_marginStart="21dp"
+        android:layout_marginLeft="21dp"
+        android:layout_marginEnd="21dp"
+        android:layout_marginRight="21dp"
+        android:layout_marginBottom="37dp"
+        android:ems="10"
+        android:gravity="bottom"
+        android:hint="@string/make_proposal_obs"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/btnProposta"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etValor" />
+
+    <Button
+        android:id="@+id/btnProposta"
+        android:layout_width="226dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="53dp"
+        android:background="@color/colorPrimary"
+        android:text="@string/make_proposal_fazer_proposta"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etObs" />
+</android.support.constraint.ConstraintLayout>

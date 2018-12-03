@@ -1,22 +1,23 @@
-package com.example.caua.mymeds.receita;
+package com.example.caua.mymeds.farmacia;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.ImageButton;
 import android.widget.ListView;
 
 import com.example.caua.mymeds.LoginActivity;
 import com.example.caua.mymeds.R;
 import com.example.caua.mymeds.constants.Constantes;
-import com.example.caua.mymeds.farmacia.MakeProposal;
 import com.example.caua.mymeds.forms.FormReceita;
+import com.example.caua.mymeds.receita.Prescription;
+import com.example.caua.mymeds.receita.PropostasReceita;
 
 import org.json.JSONArray;
 import org.json.JSONObject;
@@ -28,30 +29,17 @@ import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
 
-public class MainActivity extends AppCompatActivity {
-
-    private ImageButton btnAdicionar;
+public class MainPharmacyActivity extends AppCompatActivity {
     private ListView listView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main_farmacia);
 
         int tipo = getIntent().getIntExtra("tipo", 2);
         final List<Prescription> prescriptionsList = getAllPrescription(tipo);
 
-        btnAdicionar = (ImageButton) findViewById(R.id.btnAdicionar);
-        btnAdicionar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = getIntent();
-                Intent it = new Intent(MainActivity.this, FormReceita.class);
-                String id = intent.getStringExtra("id");
-                it.putExtra("id", id);
-                startActivity(it);
-            }
-        });
 
         listView = (ListView) findViewById(R.id.listView);
         listView.setTextFilterEnabled(true);
@@ -61,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long id) {
-                Intent intent = new Intent(getApplicationContext(), PropostasReceita.class);
+                Intent intent = new Intent(getApplicationContext(), MakeProposal.class);
                 Prescription pres = prescriptionsList.get(position);
                 intent.putExtra("id", pres.getId());
                 intent.putExtra("user_id", getIntent().getStringExtra("id"));
@@ -74,7 +62,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-
 
     public List getAllPrescription(int tipo) {
         List<Prescription>  prescriptions = new ArrayList<Prescription>();
@@ -144,11 +131,11 @@ public class MainActivity extends AppCompatActivity {
         // Handle item selection
         switch (item.getItemId()) {
             case R.id.sair:
-                it = new Intent(MainActivity.this, LoginActivity.class);
+                it = new Intent(MainPharmacyActivity.this, LoginActivity.class);
                 startActivity(it);
                 return true;
             case R.id.receitas_titulo:
-                it = new Intent(MainActivity.this, FormReceita.class);
+                it = new Intent(MainPharmacyActivity.this, FormReceita.class);
                 startActivity(it);
                 return true;
             default:

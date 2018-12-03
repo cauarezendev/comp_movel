@@ -34,7 +34,7 @@ public class FormProposal extends AppCompatActivity {
                 it = new Intent(FormProposal.this, LoginActivity.class);
                 startActivity(it);
                 return true;
-            case R.id.nova_receita:
+            case R.id.receitas_titulo:
                 it = new Intent(FormProposal.this, FormReceita.class);
                 startActivity(it);
                 return true;
